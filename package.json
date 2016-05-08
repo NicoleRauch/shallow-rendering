@@ -2,15 +2,14 @@
   "name": "shallow-rendering",
   "private": true,
   "scripts": {
-    "build": "npm install && npm test && NODE_ENV=production webpack -p --config webpack.prod.config.js",
+    "build": "npm install && NODE_ENV=production webpack -p --config webpack.prod.config.js",
     "webpack": "NODE_ENV=production webpack -p --config webpack.prod.config.js",
     "build-watch": "webpack --watch --config webpack.config.js",
     "start": "node server.js",
     "lint": "eslint src",
     "check-updates": "node_modules/.bin/ncu",
-    "test": "node_modules/.bin/mocha --compilers js:babel/register --recursive 'test'",
-    "test-watch": "node_modules/.bin/mocha --watch --compilers js:babel/register --recursive 'test'",
-    "ci-test": "npm install && JUNIT_REPORT_PATH=test-reports.xml JUNIT_REPORT_STACK=1 node_modules/.bin/mocha --reporter mocha-jenkins-reporter --compilers js:babel/register 'test/**/*Test.js'"
+    "test": "node_modules/.bin/mocha --compilers js:babel-core/register --recursive 'test'",
+    "test-watch": "node_modules/.bin/mocha --watch --compilers js:babel-core/register --recursive 'test'"
   },
   "devDependencies": {
     "babel-core": "6.8.0",
