@@ -1,0 +1,44 @@
+{
+  "name": "shallow-rendering",
+  "private": true,
+  "scripts": {
+    "build": "npm install && npm test && NODE_ENV=production webpack -p --config webpack.prod.config.js",
+    "webpack": "NODE_ENV=production webpack -p --config webpack.prod.config.js",
+    "build-watch": "webpack --watch --config webpack.config.js",
+    "start": "node server.js",
+    "lint": "eslint src",
+    "check-updates": "node_modules/.bin/ncu",
+    "test": "node_modules/.bin/mocha --compilers js:babel/register --recursive 'test'",
+    "test-watch": "node_modules/.bin/mocha --watch --compilers js:babel/register --recursive 'test'",
+    "ci-test": "npm install && JUNIT_REPORT_PATH=test-reports.xml JUNIT_REPORT_STACK=1 node_modules/.bin/mocha --reporter mocha-jenkins-reporter --compilers js:babel/register 'test/**/*Test.js'"
+  },
+  "devDependencies": {
+    "babel-core": "6.8.0",
+    "babel-eslint": "6.0.4",
+    "babel-loader": "6.2.4",
+    "babel-polyfill": "6.8.0",
+    "babel-preset-es2015": "6.6.0",
+    "babel-preset-react": "6.5.0",
+    "babel-register": "6.8.0",
+    "enzyme": "2.2.0",
+    "eslint": "2.9.0",
+    "eslint-plugin-react": "5.0.1",
+    "html-webpack-plugin": "2.16.1",
+    "jsdom": "9.0.0",
+    "mocha": "2.4.5",
+    "must": "0.13.1",
+    "npm-check-updates": "2.6.4",
+    "react-addons-test-utils": "15.0.2",
+    "react-hot-loader": "1.3.0",
+    "react-shallow-renderer-helpers": "2.0.2",
+    "sinon": "1.17.4",
+    "webpack": "1.13.0",
+    "webpack-dev-server": "1.14.1"
+  },
+  "dependencies": {
+    "react": "15.0.2",
+    "react-autosuggest": "3.7.3",
+    "react-dom": "15.0.2",
+    "react-router": "2.4.0"
+  }
+}
