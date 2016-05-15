@@ -5,8 +5,8 @@ import SimpleFunctionComponent from "./SimpleFunctionComponent";
 import NestedClassComponent from "./NestedClassComponent";
 import NestedClassPassingPropComponent from "./NestedClassPassingPropComponent";
 import ButtonComponent from "./ButtonComponent";
-import CheckboxComponent from "./CheckboxComponent";
 import CheckboxComponentWithState from "./CheckboxComponentWithState";
+import LifecycleComponent from "./LifecycleComponent";
 
 ReactDOM.render(
   <div>
@@ -18,9 +18,9 @@ ReactDOM.render(
     <hr/>
     <ButtonComponent onButtonClick={() => alert("You clicked me!")} />
     <hr/>
-    <CheckboxComponent />
-    <hr />
     <CheckboxComponentWithState />
+    <hr />
+    <LifecycleComponent />
     <hr />
     </div>
   , document.getElementById("root")
